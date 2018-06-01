@@ -1,0 +1,13 @@
+
+1. development
+2.   store: neighborly@shopify.com
+3.   password: secret
+4.  theme_id: "live"
+5. bucket_size: 40
+6. refill_rate: 2
+7. ignore_files:
+8.  - "*.swp"
+9.  - "*~"
+10. - "config/settings_data.json
+
+
