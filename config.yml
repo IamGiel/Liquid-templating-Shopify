@@ -1,6 +1,6 @@
 development:
-  store: example.myshopify.com
-  password: add-password-in-config
+  store: neighborlys.myshopify.com
+  password: 145bc941c35259aae82a5c7b8072ba99
   theme_id: "live"
   bucket_size: 40
   refill_rate: 2
@@ -8,6 +8,9 @@ development:
     - "*.swp"
     - "*~"
     - "config/settings_data.json"
+
+
+
 
 
 
