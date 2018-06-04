@@ -3238,14 +3238,20 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
 }
 
 .product-form__cart-submit {
-  display: block;
-  width: 100%;
-  line-height: 1.4;
-  padding-left: 5px;
-  padding-right: 5px;
-  white-space: normal;
-  margin-top: 0px;
-  min-height: 44px;
+display: inline-block;
+    width: 40%;
+    line-height: 1.4;
+    padding-left: 5px;
+    padding-right: 5px;
+    white-space: normal;
+    margin-top: 0px;
+    min-height: 22px !important;
+    height: 25px;
+    position: relative;
+    top: 25px;
+    left: 50%;
+    border-radius: 2em;
+    line-height: 2px;
 
   .product-single--small-image &,
   .product-single--full-image & {
@@ -3253,10 +3259,14 @@ $color-blankstate-background: rgba($color-body-text, 0.1);
     margin-right: 10px;
   }
 
+
+
   .product-form__item--payment-button & {
     margin-top: 10px;
   }
 }
+
+
 
 .shopify-payment-button {
 
@@ -6071,5 +6081,26 @@ $toolbar-height-small: 46px;
   bottom: 0;
   left: 0;
   z-index: 2;
+}
+
+{% comment %} Cusotmized button for renting {% endcomment %}
+
+.rent-it-out {
+  border-color: darkgreen; 
+  border-radius: 2em;
+  color:white;
+  width: 40%;
+  text-align: center;
+  background-color: LIGHTCORAL;
+  opacity: 0.5;
+
+  {% comment %} THIS IS TO MAKE IT POP OUT WHEN WE HOVER ON IT LATER {% endcomment %}
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.rent-it-out:hover {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 

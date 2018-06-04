@@ -71,6 +71,7 @@
           {%- assign enable_thumbnail_slides = true -%}
         {% endif %}
 
+        {% comment %} slide buttons here {% endcomment %}
         <div class="thumbnails-wrapper{% if enable_thumbnail_slides == true %} thumbnails-slider--active{% endif %}">
           {% if enable_thumbnail_slides == true %}
             <button type="button" class="btn btn--link medium-up--hide thumbnails-slider__btn thumbnails-slider__prev thumbnails-slider__prev--{{ section.id }}">
@@ -171,27 +172,21 @@
               </div>
             {% endif %}
             <div class="product-form__item product-form__item--submit{% if section.settings.enable_payment_button %} product-form__item--payment-button{% endif %}{% if product.has_only_default_variant %} product-form__item--no-variants{% endif %}">
-              
+
 			<!--        separator        -->
               <hr>
 			<!--  this is for buy and rent section  -->
-              
+
               <button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="btn product-form__cart-submit{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}">
                 <span id="AddToCartText-{{ section.id }}">
                   BUY
                 </span>
               </button>
-              
+
               <br>
-              
-               <button type="submit" name="add" id="AddToCart-{{ section.id }}" {% unless current_variant.available %}disabled="disabled"{% endunless %} class="btn product-form__cart-submit{% if section.settings.enable_payment_button %} btn--secondary-accent{% endif %}">
-                <span id="AddToCartText-{{ section.id }}">
-                  RENT
-                </span>
-              </button>
-              
-              
-              
+
+              <a href="https://neighborlysequipment.com/pages/rent"><div class="rent-it-out">RENT</div></a> 
+
               {% if section.settings.enable_payment_button %}
                 {{ form | payment_button }}
               {% endif %}

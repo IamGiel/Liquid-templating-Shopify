@@ -16,7 +16,7 @@ assets/password.js:
 assets/theme.js:
   development: 2018-05-25T00:10:47-04:00   ebe62458c2014dddd482398af4d3268a
 assets/theme.scss.liquid:
-  development: 2018-05-31T16:47:36-04:00   4b7e11fba07644f5c112456e281ac1cd
+  development: 2018-06-03T14:55:03-04:00   2ae85005962cfb02493ca1ea31641da3
 assets/vendor.js:
   development: 2018-05-08T10:14:22-04:00   465fb5b94497c1cdcd55ba6cb04ffeb2
 config/settings_schema.json:
@@ -88,7 +88,7 @@ sections/password-footer.liquid:
 sections/password-header.liquid:
   development: 2018-05-08T10:14:20-04:00   2f768874e4de2c482cec2f6fb646b4c0
 sections/product-template.liquid:
-  development: 2018-06-01T11:05:52-04:00   85dd44ba9b6459f960117d06b7f2b648
+  development: 2018-06-04T11:02:19-04:00   30c12421497d947c0aea8dee2e6c35c9
 sections/quotes.liquid:
   development: 2018-05-08T10:14:20-04:00   70e88d0bab28637bf601aeaf50b6836c
 sections/rich-text.liquid:
@@ -258,9 +258,9 @@ templates/index.liquid:
 templates/list-collections.liquid:
   development: 2018-05-08T10:14:26-04:00   d42f6d6957169811896f646709d353d9
 templates/page.contact.liquid:
-  development: 2018-05-08T10:14:26-04:00   e5ad157804a0b23ba6387683e308dfe0
+  development: 2018-06-04T11:10:29-04:00   e5ad157804a0b23ba6387683e308dfe0
 templates/page.liquid:
-  development: 2018-05-08T10:14:26-04:00   26f97d3355078de5c6678ed3b34ad7f6
+  development: 2018-06-04T12:14:21-04:00   ec4e02803e1bc2b9fdbddd05ab9214bc
 templates/password.liquid:
   development: 2018-05-08T10:14:26-04:00   30d1743d26765ce8c3fa53a3fdf9524f
 templates/product.liquid:
