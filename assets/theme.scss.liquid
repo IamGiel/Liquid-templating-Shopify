@@ -2326,9 +2326,11 @@ textarea {
   padding: 0;
   text-align: center;
   margin: 25px 0;
+  color:black;
 
   a {
     padding: 3px 10px;
+    color:black;
   }
 }
 
@@ -2511,9 +2513,12 @@ hr {
 
 .grid--no-gutters {
   margin-left: 0;
+  background-color: snow;
 
   .grid__item {
     padding-left: 0;
+    background-color: snow;
+    box-shadow: none;
   }
 }
 
@@ -6086,13 +6091,16 @@ $toolbar-height-small: 46px;
 {% comment %} Cusotmized button for renting {% endcomment %}
 
 .rent-it-out {
-  border-color: darkgreen; 
-  border-radius: 2em;
-  color:white;
-  width: 40%;
+
+  border-color: darkgreen;
+  border-radius: 6px;
+  color: white;
+  height: 2em;
+  width: 100%;
   text-align: center;
-  background-color: LIGHTCORAL;
+  background-color: #0b430b;
   opacity: 0.5;
+  line-height: 4vh;
 
   {% comment %} THIS IS TO MAKE IT POP OUT WHEN WE HOVER ON IT LATER {% endcomment %}
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
