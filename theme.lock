@@ -30,7 +30,7 @@ layout/gift_card.liquid:
 layout/password.liquid:
   development: 2018-05-30T16:30:48-04:00   c3fc5cd3dd53d0ddc62bb50e2f875635
 layout/theme.liquid:
-  development: 2018-06-05T17:59:24-04:00   fd6a0396a23c3247d79b4a2c7d87f89b
+  development: 2018-06-06T15:43:55-04:00   fd6a0396a23c3247d79b4a2c7d87f89b
 locales/de.json:
   development: 2018-05-25T00:10:48-04:00   a8d5a1c84f4641c79ed995c97ea9a261
 locales/en.default.json:
@@ -92,7 +92,7 @@ sections/password-footer.liquid:
 sections/password-header.liquid:
   development: 2018-05-08T10:14:20-04:00   2f768874e4de2c482cec2f6fb646b4c0
 sections/product-template.liquid:
-  development: 2018-06-05T18:02:17-04:00   96bcf0fb36648d9bddc17d58a7cbbbb3
+  development: 2018-06-06T15:44:21-04:00   75ff4294aa4c1b3474bc0a8974c1e329
 sections/quotes.liquid:
   development: 2018-05-08T10:14:20-04:00   70e88d0bab28637bf601aeaf50b6836c
 sections/rent.liquid:
