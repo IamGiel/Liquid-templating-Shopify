@@ -2,10 +2,13 @@
 {{ '"//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"' | script_tag }}
 {{ '"//code.jquery.com/jquery-3.3.1.slim.min.js crossorigin="anonymous"' | script_tag }}
 {{ '"//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"' | script_tag }}
+{{ '"//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"' | stylesheet_tag }}
+
+
+<h2 class="reserve-header">Reserve Your Equipment Today</h2>
 
 {% comment %} CALENDAR PICK/DROP OFF DATES {% endcomment %}
 
-<h2 class="reserve-header">Reserve Your Equipment Today</h2>
 <div class="pickup-Form">
   <form action="">
     <div class="pickup">
@@ -72,12 +75,51 @@
       
     </div>
   </div>
-  <button type="submit" class="btn btn-primary" id="btnUserInfo">Submit</button>
+  <button type="submit" class="btn btn-primary" id="btnUserInfo" data-toggle="modal" data-target="#exampleModalCenter">Submit</button>
 </form>
 
 </div>
 
-<br>
+{% comment %} THIS IS CONFIRMATION SECTION {% endcomment %}
+
+
+
+<!-- Button trigger modal -->
+{% comment %} <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button> {% endcomment %}
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Your Rental Information Summary</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        {% comment %} THIS IS THE POP UP DIV {% endcomment %}
+        <div class="modal-body">
+          <h5>Check your info...</h5>
+          {% comment %} <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p> {% endcomment %}
+          <p>
+            Name: `${fName}`
+
+          </p>
+
+          <hr>
+          <h5>Tooltips in a modal</h5>
+          <p><a href="#" class="tooltip-test" title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="Tooltip">that link</a> have tooltips on hover.</p>
+        </div>
+        {% comment %} END POP UP DIV {% endcomment %}
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 
@@ -122,10 +164,12 @@ $("#btnUserInfo").on("click", (e) => {
   let zip = $("#inputZip").val().trim();
 
   //print user input in the console
-  console.log(fName + " " + lName + " " +  email + " " + 
+  console.log(fName + " " + lName + " " +  email + " " +
               address + " " + address1 + " " + city + " " + state + " " + zip);
+
   $(".customer-info").hide();
   $(".confirmation").show();
+  $('#exampleModal').show();
 })
 </script>
 
