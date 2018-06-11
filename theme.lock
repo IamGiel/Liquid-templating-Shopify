@@ -104,7 +104,7 @@ sections/slideshow.liquid:
 snippets/bgset.liquid:
   development: 2018-05-08T10:14:22-04:00   85889bbc39b57621f32fad66317366fc
 snippets/calendar.liquid:
-  development: 2018-06-11T13:33:25-04:00   839d08c650cd3fc7008e951bdadd5389
+  development: 2018-06-11T13:52:09-04:00   f686db72c4997a69932dc62e23d11226
 snippets/collection-grid-item.liquid:
   development: 2018-05-25T00:10:47-04:00   a8289cb017c432e34d985124fbbcc6bb
 snippets/comment.liquid:
