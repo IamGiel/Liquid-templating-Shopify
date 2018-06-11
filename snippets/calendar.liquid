@@ -10,12 +10,12 @@
   <form action="">
     <div class="pickup">
       Pick up Date:
-      <input type="date" name="pickup">
+      <input type="date" name="pickup" id="pickup">
     </div>
       <br>
     <div class="return">
       Return Date:
-      <input type="date" name="return">
+      <input type="date" name="return" id="returnIt">
     </div>
     <input type="submit" class="btn btn-primary" id="submitBtn">
   </form>
@@ -72,16 +72,37 @@
       
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary btnUserInfo">Submit</button>
 </form>
 
 </div>
+
+<br>
 
 <script>
 
 $("#submitBtn").on("click", (e) => {
   e.preventDefault();
 
+  let pickup = $("#pickup").val().trim();
+  let returnIt = $("#returnIt").val().trim();
+  let pickupDate  = pickup.toString().slice(-2);
+  let returnItDate = returnIt.toString().slice(-2);
+  console.log(pickup);
+  console.log(returnIt);
+  console.log(pickupDate);
+  console.log(returnItDate);
+
+  if(!pickup || !returnIt){
+    alert("Uh oh!, check your the dates...");
+    return false;
+  }
+  if(returnItDate < pickupDate) {
+    alert("Looks like we're returning the equipment on a wrong date...");
+    return false;
+  }
+
+  $(".customer-info").show();
   $(".pickup-Form").hide();
 })
 </script>
