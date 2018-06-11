@@ -42,7 +42,8 @@
       <input type="email" class="form-control" id="email" placeholder="Email">
     </div>
     <div class="form-group col-md-6">
-      {% comment %} empty {% endcomment %}
+      <label for="inputEmail4">Contact Number</label>
+      <input type="number" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" maxlength="10" class="form-control" id="email" placeholder="contact">
     </div>
   </div>
   <div class="form-group col-md-12">
@@ -103,10 +104,14 @@
         <div class="modal-body">
           <h5>Check your info...</h5>
           {% comment %} <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p> {% endcomment %}
-          <p>
-            Name: `${fName}`
+          <pre>
+            First Name: <p id="nameDisplay"></p> Last Name<p id="lastnameDisplay"></p>
+            Email: <p id="emailDisplay"></p>
+            Pick-up on: 
+            Return on:
 
-          </p>
+
+          </pre>
 
           <hr>
           <h5>Tooltips in a modal</h5>
@@ -167,9 +172,16 @@ $("#btnUserInfo").on("click", (e) => {
   console.log(fName + " " + lName + " " +  email + " " +
               address + " " + address1 + " " + city + " " + state + " " + zip);
 
+  if(!fName || !lName || !email || !address || !city || !state || !zip ){
+    alert("Uh oh!, check your information...");
+    return false;
+  }
+
   $(".customer-info").hide();
   $(".confirmation").show();
   $('#exampleModal').show();
+
+  $("#nameDisplay").text(fName);
 })
 </script>
 
