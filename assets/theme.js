@@ -3223,3 +3223,15 @@ theme.init = function() {
 };
 
 $(theme.init);
+
+// calendar date picker
+
+$(document).ready(function() {
+  $(function() {
+    $("#date").datepicker({
+      minDate: +1,
+      maxDate: "+2M",
+      beforeShowDay: jQuery.datepicker.noWeekends
+    });
+  });
+});

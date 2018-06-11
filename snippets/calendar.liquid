@@ -1,0 +1,88 @@
+{{ '//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js' | script_tag }}
+{{ '"//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"' | script_tag }}
+{{ '"//code.jquery.com/jquery-3.3.1.slim.min.js crossorigin="anonymous"' | script_tag }}
+{{ '"//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"' | script_tag }}
+
+{% comment %} CALENDAR PICK/DROP OFF DATES {% endcomment %}
+
+<h2 class="reserve-header">Reserve Your Equipment Today</h2>
+<div class="pickup-Form">
+  <form action="">
+    <div class="pickup">
+      Pick up Date:
+      <input type="date" name="pickup">
+    </div>
+      <br>
+    <div class="return">
+      Return Date:
+      <input type="date" name="return">
+    </div>
+    <input type="submit" class="btn btn-primary" id="submitBtn">
+  </form>
+</div>
+
+{% comment %} THIS SECTION IS USER INFO FORMS {% endcomment %}
+
+<div class="customer-info">
+  <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputFirstName">First Name</label>
+      <input type="text" class="form-control" id="firstName" placeholder="First Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputLastName">Last Name</label>
+      <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      {% comment %} empty {% endcomment %}
+    </div>
+  </div>
+  <div class="form-group col-md-12">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-group col-md-12">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">Zip</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>
+
+<script>
+
+$("#submitBtn").on("click", (e) => {
+  e.preventDefault();
+
+  $(".pickup-Form").hide();
+})
+</script>
+

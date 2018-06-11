@@ -140,6 +140,15 @@
           </div>
         </div>
       </footer>
+      {% comment %} added this calendar template {% endcomment %}
+      <div style="width:300px; clear:both;">
+        <p>
+          <label for="date">Pick a delivery date:</label>
+          <input id="date" type="text" name="attributes[date]" value="{{ cart.attributes.date }}" />
+          <span style="display:block" class="instructions"> We do not deliver during the weekend.</span>
+        </p>
+      </div>
+
     </form>
   {% else %}
     <div class="empty-page-content text-center">

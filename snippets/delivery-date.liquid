@@ -1,0 +1,29 @@
+{{ '//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css' | stylesheet_tag }}
+{{ '//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js' | script_tag }}
+
+<p>Rent Your Equipment Today</p>
+<p><i>Its Easy as 1-2-3!</i><p>
+
+<div style="width:300px; clear:both;">
+
+  <p>
+    <label for="date">Pick a delivery date:</label>
+    <input id="date" type="text" name="attributes[date]" value="{{ cart.attributes.date }}" />
+    <span style="display:block" class="instructions"> We do not deliver during the week-end.</span>
+  </p>
+</div>
+
+<script>
+jQuery(function() {
+  jQuery("#date").datepicker( { 
+    minDate: +1, 
+    maxDate: '+2M',
+    beforeShowDay: jQuery.datepicker.noWeekends
+  } );
+});
+</script>
+
+{% comment %}
+  To remove days of the week that aren't Saturday and Sunday, use this:
+  http://stackoverflow.com/questions/2968414/disable-specific-days-of-the-week-on-jquery-ui-datepicker
+{% endcomment %}
