@@ -6,7 +6,7 @@
 
 
 <h2 class="reserve-header">Reserve Your Equipment Today</h2>
-
+<p id="easy123"> Its as easy as 1-2-3!</p>
 {% comment %} CALENDAR PICK/DROP OFF DATES {% endcomment %}
 
 <div class="pickup-Form">
@@ -20,7 +20,9 @@
       Return Date:
       <input type="date" name="return" id="returnIt">
     </div>
-    <input type="submit" class="btn btn-primary" id="submitBtn">
+    <div class="submitDate">
+      <input type="submit" class="btn btn-primary" id="submitBtn">
+    </div>
   </form>
 </div>
 
@@ -47,7 +49,7 @@
     </div>
   </div>
   <div class="form-group col-md-12">
-    <label for="inputAddress">Address</label>
+    <label for="inputAddress">Delivery Address</label>
     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
   </div>
   <div class="form-group col-md-12">
@@ -63,7 +65,7 @@
       <label for="inputState">State</label>
       <select id="inputState" class="form-control">
         <option selected>Choose...</option>
-        <option>...</option>
+        <option value="---">---</option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="District of Columbia">District of Columbia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Guam">Guam</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Northern Marianas Islands">Northern Marianas Islands</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Puerto Rico">Puerto Rico</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virginia">Virginia</option><option value="Virgin Islands">Virgin Islands</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option>
       </select>
     </div>
     <div class="form-group col-md-2">
@@ -83,40 +85,36 @@
 
 {% comment %} THIS IS CONFIRMATION SECTION {% endcomment %}
 
-
-
-<!-- Button trigger modal -->
-{% comment %} <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-  Launch demo modal
-</button> {% endcomment %}
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Your Rental Information Summary</h5>
+        <h5 class="modal-title" id="exampleModalCenterTitle">Neighborly's Equipment is at your displosal</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
         {% comment %} THIS IS THE POP UP DIV {% endcomment %}
         <div class="modal-body">
-          <h5>Check your info...</h5>
+          <h5>Please check your info...</h5>
           {% comment %} <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p> {% endcomment %}
           <pre>
-            First Name: <p id="nameDisplay"></p> 
-            Last Name:<p id="lastnameDisplay"></p>
-            Contact:<p id="contactDisplay"></p>
-            Email: <p id="emailDisplay"></p>
-            Pick-up on: <p id="pickDisplay"></p>
-            Return on: <p id="returnDisplay"></p>
+            <div class="infoContainer">
+              <p>First Name: <p id="nameDisplay"></p></p> 
+              <p>Last Name: <p id="lastnameDisplay"></p></p>
+              <p>Delivery Address:  <p id="addressDisplay"></p></p>
+              <p>Contact: <p id="contactDisplay"></p></p>
+              <p>Email: <p id="emailDisplay"></p></p>
+              <p>Pick-up on: <p id="pickDisplay"></p></p>
+              <p>Return on: <p id="returnDisplay"></p></p>
+            </div>
           </pre>
         </div>
         {% comment %} END POP UP DIV {% endcomment %}
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
       </div>
     </div>
   </div>
@@ -128,11 +126,11 @@
 $("#submitBtn").on("click", (e) => {
   e.preventDefault();
 
+ 
   let pickup = $("#pickup").val().trim();
   let returnIt = $("#returnIt").val().trim();
   let pickupDate  = pickup.toString().slice(-2);
   let returnItDate = returnIt.toString().slice(-2);
-
   //print user input in the console
   console.log(pickup);
   console.log(returnIt);
@@ -179,13 +177,18 @@ $("#btnUserInfo").on("click", (e) => {
   $('#exampleModal').show();
 
   //here we display the user input in the modal
-  $("#nameDisplay").text(fName);
-  $("#lastnameDisplay").text(lName);
-  $("#contactDisplay").text(contact);
-  $("#emailDisplay").text(email);
-  $("#pickDisplay").text(pickup);
-  $("#returnDisplay").text(returnIt);
+  $("#nameDisplay").html(fName);
+  $("#lastnameDisplay").html(lName);
+  $("#addressDisplay").html( "\n " + address + " " + address1 + "\n " + city + " " + state + " " + zip);
+  $("#contactDisplay").html(contact);
+  $("#emailDisplay").html(email);
+  $("#pickDisplay").html(pickup);
+  $("#returnDisplay").html(returnIt);
 
+})
+
+$("#saveChanges").on("click", ()=> {
+    document.location.replace('https://neighborlysequipment.com/pages/rent-it-with-neighborlys');
 })
 </script>
 

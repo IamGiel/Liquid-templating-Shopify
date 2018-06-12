@@ -6117,10 +6117,26 @@ $toolbar-height-small: 46px;
   color: #436D96;
 }
 
-.submitBtn {
+#easy123{
+  position:relative;
+  display:inline-block;
+  left:20%;
+  font-style: italic;
+}
+.submitDate {
+  width: 300px;
   position: relative;
-  top: -4em;
-  left: 157%;
+  top: -11vh;
+  width: 30%;
+  margin: 0em;
+  float: right;
+  left: 87%;
+}
+
+#submitBtn {
+  position: relative;
+  top: 0vh;
+  left: 0%;
 }
 
 .customer-info {
@@ -6128,11 +6144,11 @@ $toolbar-height-small: 46px;
 }
 
 #btnUserInfo {
-    position: relative;
-    top: 2vh;
-    left: 2%;
-    display: block;
-    width: 97%;
+  position: relative;
+  top: 2vh;
+  left: 2%;
+  display: block;
+  width: 97%;
 }
 
 #exampleModalCenter {
@@ -6141,11 +6157,47 @@ $toolbar-height-small: 46px;
   padding-left: 0px;
 }
 .modal-backdrop {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background-color: #000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #000;
+}
+p {
+  color: #69727b;
+  margin: 0px 2px 3.44444px 0px;
+  position: relative;
+  display: inline-block;
+}
+
+.modal-content {
+  position: relative;
+  top: 4em;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #999;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 6px;
+  outline: 0;
+  -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+  box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+#addressDisplay {
+  height: 4vh;
+  position: relative;
+  top: -7vh;
+  display: block;
+  left: 55%;
+}
+
+.infoContainer {
+  position: relative;
+  display: block;
+  {% comment %} justify-content: left; {% endcomment %}
+  float: left;
+  left: -8em;
+  width: 100%;
 }
