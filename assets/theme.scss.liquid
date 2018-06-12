@@ -6092,13 +6092,18 @@ $toolbar-height-small: 46px;
 
 @mixin datepicker {
   width: 50%;
-  margin: 2px;
+  margin: 0px;
   padding: 6px;
   font-size: 15px;
   display: inline-flex;
 }
 
-.pickup-Form, .input-field {
+form.pickup-Form {
+  display: inline-flex !important;
+  width: 100% !important;
+}
+
+.input-field {
   display: flex;
 }
 
@@ -6110,8 +6115,8 @@ $toolbar-height-small: 46px;
 .return {
   @include datepicker;
   position: relative;
-  top: -4em;
-  left: 51%;
+  {% comment %} top: -4em;
+  left: 42%; {% endcomment %}
 }
 
 .reserve-header {
@@ -6139,7 +6144,7 @@ $toolbar-height-small: 46px;
   position: relative;
   display: block;
   top: 12vh;
-  left: 45%;
+  left: 60%;
   width: 7em;
   padding: 12px;
 }
@@ -6213,8 +6218,8 @@ p {
 }
 .circledSteps {
   position: relative;
-  display: none;
-  height: 7vh;
+  display: block;
+  height: 12vh;
   width: 40%;
   {% comment %} border-style: solid; {% endcomment %}
   {% comment %} border-color: green; {% endcomment %}
@@ -6251,4 +6256,11 @@ p {
 }
 input[type="date"]::-webkit-inner-spin-button{
     -webkit-appearance: none;
+}
+input {
+  padding: 10px 7px;
+  width: 12em;
+}
+#steptwo{
+  display:none;
 }
