@@ -158,50 +158,20 @@
                 <input type="number" id="Quantity" name="quantity" value="1" min="1" class="product-form__input" pattern="[0-9]*">
               </div>
             {% endif %}
-			<!--        separator        -->
-              <hr>
-			<!--  this is for buy and rent section  -->
         </div>
-
-        {%- comment -%}
-          Live region for announcing updated price and availability to screen readers
-        {%- endcomment -%}
         <p class="visually-hidden" data-product-status
           aria-live="polite"
           role="status"
-        ></p>
+        >
+        </p>
 
         <div class="product-single__description rte">
           {{ product.description }}
         </div>
 
-        <hr><br>
-
-        {% comment %} ================================= {% endcomment %}
-
-        {% comment %} <h2 class="reserve-header">Reserve Your Equipment Today</h2>
-
-        <div class="pickup-Form">
-
-          <form action="/">
-            <div class="pickup">
-              Pick up Date:
-              <input type="date" name="pickup">
-            </div>
-              <br>
-            <div class="return">
-              Return Date:
-              <input type="date" name="return">
-            </div>
-            <input type="submit" class="submitBtn">
-          </form>
-        </div> {% endcomment %}
+        <hr>
 
         {% include 'calendar' %}
-
-        <br>
-      
-        {% comment %} ================================= {% endcomment %}
 
       </div>
     </div>

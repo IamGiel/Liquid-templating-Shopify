@@ -7,8 +7,12 @@
 
 <h2 class="reserve-header">Reserve Your Equipment Today</h2>
 <p id="easy123"> Its as easy as 1-2-3!</p>
-  <button type="submit" class="btn btn-primary" id="getStarted">Get Started!</button>
-
+<br>
+<div class="circledSteps">
+  <span class="one">1 </span> <span class="arrow1"> ➡ </span>
+  <span class="two">2 </span> <span class="arrow2"> ➡ </span>
+  <span class="three">3</span>
+</div>
 {% comment %} CALENDAR PICK/DROP OFF DATES {% endcomment %}
 
 <div class="pickup-Form">
@@ -124,12 +128,7 @@
 
 <script>
 
-$("#getStarted").on("click", (e) => {
-  e.preventDefault();
-  $(".pickup-Form").show();
-  $("#getStarted").hide();
-
-})
+$(".pickup-Form").show();
 
 // THIS SECTION FOR CLICKING PICKUP/RETURN DATES
 $("#submitBtn").on("click", (e) => {
@@ -140,6 +139,8 @@ $("#submitBtn").on("click", (e) => {
   let returnIt = $("#returnIt").val().trim();
   let pickupDate  = pickup.toString().slice(-2);
   let returnItDate = returnIt.toString().slice(-2);
+  let date = new Date();
+  let todaysDate = date.getDate();
   //print user input in the console
   console.log(pickup);
   console.log(returnIt);
@@ -152,6 +153,10 @@ $("#submitBtn").on("click", (e) => {
   }
   if(returnItDate < pickupDate) {
     alert("Looks like we're returning the equipment on a wrong date...");
+    return false;
+  }
+  if(pickupDate < todaysDate){
+    alert("Uh oh, cant pick it up from the past...");
     return false;
   }
 

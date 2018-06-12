@@ -6091,11 +6091,11 @@ $toolbar-height-small: 46px;
 {% comment %} Cusotmized button for renting {% endcomment %}
 
 @mixin datepicker {
-  width: 92%;
+  width: 50%;
   margin: 2px;
   padding: 6px;
   font-size: 15px;
-  display: flex;
+  display: inline-flex;
 }
 
 .pickup-Form, .input-field {
@@ -6110,8 +6110,8 @@ $toolbar-height-small: 46px;
 .return {
   @include datepicker;
   position: relative;
-  top: -6em;
-  left: 46%;
+  top: -4em;
+  left: 51%;
 }
 
 .reserve-header {
@@ -6137,8 +6137,11 @@ $toolbar-height-small: 46px;
 
 #submitBtn {
   position: relative;
-  top: 0vh;
-  left: 25%;
+  display: block;
+  top: 12vh;
+  left: 45%;
+  width: 7em;
+  padding: 12px;
 }
 
 .customer-info, .pickup-Form  {
@@ -6205,6 +6208,47 @@ p {
 }
 #getStarted {
   position: relative;
-  top: 6vh;
-  left: 8%;
+  top: 1vh;
+  left: 30%;
+}
+.circledSteps {
+  position: relative;
+  display: none;
+  height: 7vh;
+  width: 40%;
+  {% comment %} border-style: solid; {% endcomment %}
+  {% comment %} border-color: green; {% endcomment %}
+  left: 21%;
+  text-align: center;
+}
+.one, .two, .three {
+  margin: 20px;
+  padding-left: 7px;
+  {% comment %} border-style: solid; {% endcomment %}
+  {% comment %} border-radius: 28em; {% endcomment %}
+  display: inline-flex;
+  position: relative;
+  width: 13%;
+  left: -1em;
+  top: 1vh;
+}
+.oneActive, .twoActive, .threeActive {
+  margin: 20px;
+  padding-left: 7px;
+  border-style: solid;
+  border-radius: 28em;
+  display: inline-flex;
+  position: relative;
+  width: 13%;
+  left: -1em;
+  top: 1vh;
+}
+.arrow1, .arrow2 {
+  position: relative;
+  display: none;
+  left: -10%;
+  top: 1vh;
+}
+input[type="date"]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
 }
