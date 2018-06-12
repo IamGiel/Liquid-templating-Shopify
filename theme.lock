@@ -20,7 +20,7 @@ assets/password.js:
 assets/theme.js:
   development: 2018-06-08T17:58:38-04:00   4a229a2a6d71be95777bb372201fe56e
 assets/theme.scss.liquid:
-  development: 2018-06-11T23:58:39-04:00   194f342812f8ce1581a571dc7ab24314
+  development: 2018-06-12T00:10:06-04:00   0e8d040e62c3e587085171c1d8f47b19
 assets/vendor.js:
   development: 2018-05-08T10:14:22-04:00   465fb5b94497c1cdcd55ba6cb04ffeb2
 config/settings_schema.json:
@@ -30,7 +30,7 @@ layout/gift_card.liquid:
 layout/password.liquid:
   development: 2018-05-30T16:30:48-04:00   c3fc5cd3dd53d0ddc62bb50e2f875635
 layout/theme.liquid:
-  development: 2018-06-11T23:36:10-04:00   83a4efdef496f0d808a4383914fec45d
+  development: 2018-06-12T00:06:18-04:00   03d2467153b7c33f169c10810e18f2c6
 locales/de.json:
   development: 2018-05-25T00:10:48-04:00   a8d5a1c84f4641c79ed995c97ea9a261
 locales/en.default.json:
