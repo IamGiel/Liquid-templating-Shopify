@@ -7,6 +7,8 @@
 
 <h2 class="reserve-header">Reserve Your Equipment Today</h2>
 <p id="easy123"> Its as easy as 1-2-3!</p>
+  <button type="submit" class="btn btn-primary" id="getStarted">Get Started!</button>
+
 {% comment %} CALENDAR PICK/DROP OFF DATES {% endcomment %}
 
 <div class="pickup-Form">
@@ -121,6 +123,13 @@
 </div>
 
 <script>
+
+$("#getStarted").on("click", (e) => {
+  e.preventDefault();
+  $(".pickup-Form").show();
+  $("#getStarted").hide();
+
+})
 
 // THIS SECTION FOR CLICKING PICKUP/RETURN DATES
 $("#submitBtn").on("click", (e) => {
