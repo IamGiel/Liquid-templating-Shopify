@@ -6,7 +6,12 @@
 
 
 <h2 class="reserve-header">Reserve Your Equipment Today</h2>
+<div class="thankYou">
+  <h2>Thank You</h2>
+  <p id="thankyouNote">Someone will be reaching out to you soon to confirm your rental. In the meantime, feel free to browse our store and the great deals we offer.</p>
+</div>
 <p id="easy123"> Its as easy as 1-2-3!</p>
+
 <br>
 <div class="circledSteps">
   <img id="stepone" src="https://cdn.shopify.com/s/files/1/0067/8549/9194/files/step3.png?15474423734316688999" alt="step one">
@@ -119,11 +124,13 @@
         {% comment %} END POP UP DIV {% endcomment %}
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="saveChanges">Save changes</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveChanges">Save changes</button>
       </div>
     </div>
   </div>
 </div>
+
+
 
 <script>
 
@@ -161,6 +168,8 @@ $("#submitBtn").on("click", (e) => {
 
   $(".customer-info").show();
   $(".pickup-Form").hide();
+  $("#stepone").hide();
+  $("#steptwo").show();
 })
 
  // THIS SECTION FOR SUBMITTING USER INFO
@@ -201,7 +210,13 @@ $("#btnUserInfo").on("click", (e) => {
 })
 
 $("#saveChanges").on("click", ()=> {
-    document.location.replace('https://neighborlysequipment.com/pages/rent-it-with-neighborlys');
+  $(".thankYou").show();
+  $("#thankyouNote").show();
+  $(".reserve-header").hide();
+  $("#easy123").hide();
+  $("#steptwo").hide();
+
+
 })
 </script>
 
