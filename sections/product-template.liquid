@@ -1,9 +1,14 @@
-<div class="product-template__container page-width" 
-  id="ProductSection-{{ section.id }}" 
-  data-section-id="{{ section.id }}" 
-  data-section-type="product" 
+<div class="product-template__container page-width"
+  id="ProductSection-{{ section.id }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="product"
   data-enable-history-state="true"
 >
+
+<div class="contact-box">
+  <img id="contactUs" src="https://cdn.shopify.com/s/files/1/0067/8549/9194/files/contact.png?1779355351781248062" alt="contact">
+</div>
+
   {% comment %}
     Get first variant, or deep linked one
   {% endcomment %}
@@ -170,11 +175,11 @@
         <div class="product-single__description rte">
           {{ product.description }}
         </div>
-
         <hr>
-
-
         {% include 'calendar' %}
+        {% comment %} carousel {% endcomment %}
+
+        
 
       </div>
     </div>
@@ -183,14 +188,14 @@
 
 
 
-{% if collection %}
+{% comment %} {% if collection %}
   <div class="text-center return-link-wrapper">
     <a href="{{ collection.url }}" class="btn btn--secondary btn--has-icon-before return-link">
       {% include 'icon-arrow-left' %}
       {{ 'products.product.back_to_collection' | t: title: collection.title }}
     </a>
   </div>
-{% endif %}
+{% endif %} {% endcomment %}
 
 {% unless product == empty %}
   <script type="application/json" id="ProductJson-{{ section.id }}">

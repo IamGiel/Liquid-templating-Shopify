@@ -20,7 +20,7 @@ assets/password.js:
 assets/theme.js:
   development: 2018-06-08T17:58:38-04:00   4a229a2a6d71be95777bb372201fe56e
 assets/theme.scss.liquid:
-  development: 2018-06-12T14:35:47-04:00   f7d0728cf6ba287d0aab61f050f2dff7
+  development: 2018-06-13T10:04:37-04:00   f385f6b278365a4ee21a80200d777d41
 assets/vendor.js:
   development: 2018-05-08T10:14:22-04:00   465fb5b94497c1cdcd55ba6cb04ffeb2
 config/settings_schema.json:
@@ -78,7 +78,7 @@ sections/hero.liquid:
 sections/image-bar.liquid:
   development: 2018-05-08T10:14:20-04:00   7b00dff3ab435ef3a663a146cf6c3649
 sections/list-collections-template.liquid:
-  development: 2018-05-08T10:14:20-04:00   d17b99c3ebe1304c75ab4923e7959e93
+  development: 2018-06-13T09:59:18-04:00   0c8ae47c56897ba73d4ecc1a084bd537
 sections/logo-bar.liquid:
   development: 2018-05-08T10:14:20-04:00   9068a436bb57d2e788194ed01ef9ebe2
 sections/map.liquid:
@@ -92,9 +92,11 @@ sections/password-footer.liquid:
 sections/password-header.liquid:
   development: 2018-05-08T10:14:20-04:00   2f768874e4de2c482cec2f6fb646b4c0
 sections/product-template.liquid:
-  development: 2018-06-12T13:19:40-04:00   f560d889f23b347daccd9c618765fc6d
+  development: 2018-06-13T09:58:57-04:00   047af334bb8218efbecb27117381992b
 sections/quotes.liquid:
   development: 2018-05-08T10:14:20-04:00   70e88d0bab28637bf601aeaf50b6836c
+sections/related-products.liquid:
+  development: 2018-06-13T08:44:18-04:00   211a1e89c586cda41fbc4654824ac198
 sections/rent.liquid:
   development: 2018-06-10T01:31:43-04:00   542951f286a1154fafee971367902b09
 sections/rich-text.liquid:
@@ -104,7 +106,7 @@ sections/slideshow.liquid:
 snippets/bgset.liquid:
   development: 2018-05-08T10:14:22-04:00   85889bbc39b57621f32fad66317366fc
 snippets/calendar.liquid:
-  development: 2018-06-12T14:30:47-04:00   f65e927834bc6a8e6275a96ac269031f
+  development: 2018-06-13T08:51:49-04:00   2ef59159582d3a7425e070f950758ce9
 snippets/collection-grid-item.liquid:
   development: 2018-05-25T00:10:47-04:00   a8289cb017c432e34d985124fbbcc6bb
 snippets/comment.liquid:
@@ -276,6 +278,6 @@ templates/page.rent.liquid:
 templates/password.liquid:
   development: 2018-05-08T10:14:26-04:00   30d1743d26765ce8c3fa53a3fdf9524f
 templates/product.liquid:
-  development: 2018-06-01T07:36:00-04:00   a8b973ec94163b15351915497eec8df8
+  development: 2018-06-13T08:35:30-04:00   d41abb903f8b34b397b699e23e05bece
 templates/search.liquid:
   development: 2018-05-25T00:10:48-04:00   493d2c309fec8cc0c9bda8be3684c667
