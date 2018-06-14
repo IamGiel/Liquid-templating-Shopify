@@ -1,4 +1,6 @@
 config.yml
 config/settings_data.json
+.env
+node_modules
 
 

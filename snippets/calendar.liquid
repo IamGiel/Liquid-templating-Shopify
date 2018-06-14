@@ -39,7 +39,7 @@
 {% comment %} THIS SECTION IS USER INFO FORMS {% endcomment %}
 
 <div class="customer-info">
-  <form>
+  <form action="MAILTO:lfagel84@gmail.com" method="post" enctype="text/plain">
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="inputFirstName">First Name</label>
@@ -123,7 +123,7 @@
         </div>
         {% comment %} END POP UP DIV {% endcomment %}
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Redo</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="redo">Redo</button>
         <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveChanges">Save changes</button>
       </div>
     </div>
@@ -213,8 +213,12 @@ $("#saveChanges").on("click", ()=> {
   $(".reserve-header").hide();
   $("#easy123").hide();
   $("#steptwo").hide();
-
-
 })
+
+$("#redo").on("click", ()=> {
+  location.reload();
+})
+
+
 </script>
 
