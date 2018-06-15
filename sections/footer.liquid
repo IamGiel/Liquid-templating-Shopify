@@ -55,9 +55,9 @@
   top: 2vh;
 }
 .mapLink:hover{
-  -moz-box-shadow:    3px 3px 5px 6px #ccc;
-  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-  box-shadow:         3px 3px 5px 6px #ccc;
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
 }
 .footerLinks {
   position: relative;
@@ -80,6 +80,35 @@
   color:white;
   display:block;
   margin-top:2vh;
+}
+
+.subscribe {
+  position: relative;
+  display: block;
+  top: -28vh;
+  width: 100%;
+  height: 6vh;
+  left: 72%;
+}
+#subscribeInput {
+  width:11%;
+}
+#subscribeBtn{
+  position: relative;
+  display: block;
+  top: -6vh;
+  width: 9%;
+  height: 6vh;
+  left: 11%;
+}
+#percentOff{
+  position: relative;
+  display: block;
+  top: 1vh;
+  width: 20%;
+  height: 6vh;
+  left: 0%;
+  color: white;
 }
 
 </style>
@@ -111,9 +140,17 @@
     <a class="mapLinkNavs" href="https://neighborlysequipment.com/">Home</a>
     <a class="mapLinkNavs" href="https://neighborlysequipment.com/collections/all">Equipment</a>
     <a class="mapLinkNavs" href="https://neighborlysequipment.com/pages/contact-us">Contact</a>
-    <a class="mapLinkNavs" href="">Term of Use</a>
+    <a class="mapLinkNavs" href="">Terms of Use</a>
   </div>
 </div>
+
+  <div class="subscribe">
+  <p id="percentOff">Subscribe to get 5% off your rent</p>
+    <input id="subscribeInput" type="email" placeholder="email@mail.com" name="subscribe" />
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="subscribeBtn">Subscribe</button>
+
+  </div>
+
 
 
 
