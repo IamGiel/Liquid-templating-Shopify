@@ -14,8 +14,8 @@
       "page": "Page {{ page }}"
     },
     "404": {
-      "title": "404 Page Not Found",
-      "subtext": "The page you requested does not exist.",
+      "title": "THANK YOU!",
+      "subtext": "Someone will contact you shortly. Meanwhile, see what else we have, that others viewed",
       "link": "Continue shopping"
     },
     "pagination": {
