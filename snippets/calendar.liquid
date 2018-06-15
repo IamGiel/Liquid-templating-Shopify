@@ -82,43 +82,47 @@
 
       Comments: <br><textarea name="comments" rows="5" placeholder="Enter your comments..."></textarea>
       <input type="submit" value="Submit Form" id="finalBtn"> 
-      <button type="submit" class="btn btn-primary" id="submitInfo">Submit</button> <!-- brings the modal -->
+      
     </div>
   </form>
 </div>
 
+{% comment %} <button type="submit" class="btn btn-primary" id="submitInfo">Submit</button> <!-- brings the modal --> {% endcomment %}
+
 {% comment %} THIS IS CONFIRMATION SECTION {% endcomment %}
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Neighborly's Equipment is at your displosal</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-        {% comment %} THIS IS THE POP UP DIV {% endcomment %}
-        <div class="modal-body">
-          <h5>Please check your info...</h5>
-          {% comment %} <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p> {% endcomment %}
-          <pre>
-            <div class="infoContainer">
-              <p>First Name: <p id="nameDisplay"></p></p>
-              <p>Last Name: <p id="lastnameDisplay"></p></p>
-              <p>Delivery Address:  <p id="addressDisplay"></p></p>
-              <p>Contact: <p id="contactDisplay"></p></p>
-              <p>Email: <p id="emailDisplay"></p></p>
-              <p>Pick-up on: <p id="pickDisplay"></p></p>
-              <p>Return on: <p id="returnDisplay"></p></p>
-            </div>
-          </pre>
+<div class="confirmation">
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Neighborly's Equipment is at your displosal</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        {% comment %} END POP UP DIV {% endcomment %}
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="redo">Redo</button>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveChanges">Save changes</button>
+          {% comment %} THIS IS THE POP UP DIV {% endcomment %}
+          <div class="modal-body">
+            <h5>Please check your info...</h5>
+            {% comment %} <p>This <a href="#" role="button" class="btn btn-secondary popover-test" title="Popover title" data-content="Popover body content is set in this attribute.">button</a> triggers a popover on click.</p> {% endcomment %}
+            <pre>
+              <div class="infoContainer">
+                <p>First Name: <p id="nameDisplay"></p></p>
+                <p>Last Name: <p id="lastnameDisplay"></p></p>
+                <p>Delivery Address:  <p id="addressDisplay"></p></p>
+                <p>Contact: <p id="contactDisplay"></p></p>
+                <p>Email: <p id="emailDisplay"></p></p>
+                <p>Pick-up on: <p id="pickDisplay"></p></p>
+                <p>Return on: <p id="returnDisplay"></p></p>
+              </div>
+            </pre>
+          </div>
+          {% comment %} END POP UP DIV {% endcomment %}
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="redo">Redo</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveChanges">Save changes</button>
+        </div>
       </div>
     </div>
   </div>
@@ -162,6 +166,7 @@ $("#submitBtn").on("click", (e) => {
     alert("Uh oh, cant pick it up from the past...");
     return false;
   }
+  $("#finalBtn").show();
   $(".dates").append(pickup);
   $(".customer-info").show();
   $(".pickup-Form").hide();
@@ -191,7 +196,6 @@ $("#submitInfo").on("click", (e) => {
   }
 
   $(".customer-info").hide();
-  $(".confirmation").show();
   $('#exampleModal').show();
 
   //here we display the user input in the modal
