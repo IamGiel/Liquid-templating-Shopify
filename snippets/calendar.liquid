@@ -4,6 +4,28 @@
 {{ '"//stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"' | script_tag }}
 {{ '"//stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"' | stylesheet_tag }}
 
+<!-- FormToEmail CSS -->
+<style>
+  form.fte, form.fte input, form.fte textarea, form.fte select, form.fte .fte-ckrad{font-size:16px;color:#222;font-family:verdana,sans-serif;line-height:1.3em;border-radius:0;outline:none;box-sizing:border-box;-webkit-text-size-adjust:100%;}    
+  form.fte{max-width:600px;padding:0;margin:2em auto;}
+  form.fte input, form.fte textarea, form.fte select, form.fte .fte-ckrad label{color:#666;background:#fff;border:1px solid #ccc;width:100%;padding:15px 20px;margin:15px 0 30px;transition: all .2s;}
+  form.fte input[type="text"], form.fte input[type="submit"], form.fte textarea{-webkit-appearance:none;}
+  form.fte input[type="submit"]{background:#444;color:#fff;padding:18px 28px;width:auto;border-radius:100px;cursor:pointer;border:none;margin:0;white-space:normal;}
+  form.fte input[type="submit"]:hover{background:#666;}
+  form.fte input:focus, form.fte textarea:focus, form.fte select:focus{border-color:#999;}
+  form.fte select{-moz-appearance: none; -webkit-appearance: none; background: #fff url("data:image/gif;base64,R0lGODlhCgAFAJEAAGZmZv///////wAAACH5BAEHAAIALAAAAAAKAAUAAAIKhI+CKboNGWxmFgA7") no-repeat right 20px center;padding-right:20px;cursor:pointer;}   
+  form.fte input[type="file"] {line-height:1em;font-size:1em;padding:10px;}
+  form.fte .fte-ckrad, .g-recaptcha{margin-bottom:30px;}
+  form.fte .fte-ckrad label{cursor:pointer;padding:0;margin:15px 0 0 1em;background:none;border:none;display:inline-block;width:auto;position:relative;}
+  form.fte .fte-ckrad input{width:auto;margin:.5em 0 .5em .5em;cursor:pointer;display:inline-block;opacity:0;}
+  form.fte .fte-ckrad input[type="radio"] + label::before{content:'';display:block;height:1.2em;width:1.2em;border:1px solid #ccc;border-radius:1em;position:absolute;left:-2em;top:0;background:#fff;box-shadow:inset 0px 0px 0px .3em #fff;transition: all .2s;}
+  form.fte .fte-ckrad input[type="radio"]:checked + label::before{ background:#666;}
+  form.fte .fte-ckrad input[type="checkbox"] + label::before{content:'\2713';display:block;height:1.2em;width:1.2em;border:1px solid #ccc;position:absolute;left:-2em;top:0;background:#fff;color:#fff;text-align:center;transition: all .2s;}
+  form.fte .fte-ckrad input[type="checkbox"]:checked + label::before{color:#666;}
+  form.fte input[type="file"] {line-height:1em;font-size:1em;padding:0;border:none;cursor: pointer;}
+  form.fte .credit{font:10px arial;float:right;color:#999;margin-top:22px;}
+  form.fte .credit a{color:#999;}
+</style>
 
 <h2 class="reserve-header">Reserve Your Equipment Today</h2>
 <div class="thankYou">
@@ -19,78 +41,40 @@
 </div>
 {% comment %} CALENDAR PICK/DROP OFF DATES {% endcomment %}
 
-<div class="pickup-Form">
-  <form class="pickup-Form">
-    <div class="pickup">
-      Pickup Date:
-      <input type="date" name="pickup" id="pickup">
-    </div>
-      <br>
-    <div class="return">
-      Return Date:
-      <input type="date" name="return" id="returnIt">
-    </div>
-    <div class="submitDate">
-      <input type="submit" class="btn btn-primary" id="submitBtn">
-    </div>
-  </form>
-</div>
+
 
 {% comment %} THIS SECTION IS USER INFO FORMS {% endcomment %}
 
-<div class="customer-info">
-  <form action="MAILTO:lfagel84@gmail.com" method="post" enctype="text/plain">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputFirstName">First Name</label>
-      <input type="text" class="form-control" id="firstName" placeholder="First Name">
+<div>
+  <!-- FormToEmail HTML -->	 
+  <form action="https://formtoemail.com/user_forms.php" method="post" class="fte">
+    <input type="hidden" name="user_id" value="H1HM132Q3OBG8MFQXPCU">
+    <input type="hidden" name="form_id" value="1">
+    {% comment %}  {% endcomment %}
+    <div class="pickup-Form">
+      <div class="pickup">
+        Pickup Date:
+        <input type="date" name="pickup" id="pickup">
+      </div>
+        <br>
+      <div class="return">
+        Return Date:
+        <input type="date" name="return" id="returnIt">
+      </div>
+      <div class="submitDate">
+        <input type="submit" class="btn btn-primary" id="submitBtn">
+      </div>
     </div>
-    <div class="form-group col-md-6">
-      <label for="inputLastName">Last Name</label>
-      <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+    {% comment %}  {% endcomment %}
+    <div class="customer-info">
+      First Name: <br><input type="text" name="First Name" placeholder="First Name">
+      Last Name:  <br><input type="text" name="Last Name" placeholder="Last Name">
+      Phone: <br><input type="number" name="Phone">
+      Email Address: <br><input type="text" name="email" placeholder="name@example.com">
+      Comments: <br><textarea name="comments" rows="5" placeholder="Enter your comments..."></textarea>
+      <input type="submit" value="Submit Form">
     </div>
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="email" placeholder="Email">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="contactInfo">Contact Number</label>
-      <input type="number" pattern="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$" maxlength="10" class="form-control" id="contact" placeholder="contact">
-    </div>
-  </div>
-  <div class="form-group col-md-12">
-    <label for="inputAddress">Delivery Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-  </div>
-  <div class="form-group col-md-12">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option value="---">---</option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="District of Columbia">District of Columbia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Guam">Guam</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Northern Marianas Islands">Northern Marianas Islands</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Pennsylvania">Pennsylvania</option><option value="Puerto Rico">Puerto Rico</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virginia">Virginia</option><option value="Virgin Islands">Virgin Islands</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" pattern="[0-9]{5}" minlength="5" maxlength="5" class="form-control" id="inputZip" placeholder="12345">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="form-check">
-      
-    </div>
-  </div>
-  <button type="submit" class="btn btn-primary" id="btnUserInfo" data-toggle="modal" data-target="#exampleModalCenter">Submit</button>
-</form>
-
+  </form>
 </div>
 
 {% comment %} THIS IS CONFIRMATION SECTION {% endcomment %}
@@ -130,6 +114,9 @@
   </div>
 </div>
 
+{% comment %} testing a form {% endcomment %}
+
+
 <script>
 
 $(".pickup-Form").show();
@@ -164,6 +151,8 @@ $("#submitBtn").on("click", (e) => {
     return false;
   }
 
+
+  $(".dates").append(pickup);
   $(".customer-info").show();
   $(".pickup-Form").hide();
   $("#stepone").hide();
