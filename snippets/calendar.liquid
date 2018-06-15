@@ -53,12 +53,12 @@
     {% comment %}  {% endcomment %}
     <div class="pickup-Form">
       <div class="pickup">
-        Pickup Date:
+        <div class="pickupLabel">Pickup Date:</div>
         <input type="date" name="pickup" id="pickup">
       </div>
         <br>
       <div class="return">
-        Return Date:
+        <div class="pickupLabel">Return Date:</div>
         <input type="date" name="return" id="returnIt">
       </div>
       <div class="submitDate">
@@ -174,9 +174,12 @@ $("#submitBtn").on("click", (e) => {
   $("#steptwo").show();
 })
 
+
+
  // THIS SECTION FOR SUBMITTING USER INFO
 $("#submitInfo").on("click", (e) => {
   e.preventDefault();
+
   let fName = $("#firstName").val().trim();
   let lName = $("#lastName").val().trim();
   let email = $("#email").val().trim();
@@ -196,7 +199,7 @@ $("#submitInfo").on("click", (e) => {
   }
 
   $(".customer-info").hide();
-  $('#exampleModal').show();
+  $('#exampleModalCenter').show();
 
   //here we display the user input in the modal
   $("#nameDisplay").html(fName);

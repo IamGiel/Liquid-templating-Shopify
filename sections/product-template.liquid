@@ -125,7 +125,7 @@
                 <s id="ComparePrice-{{ section.id }}">{{ current_variant.compare_at_price | money }}</s>
                 <span class="product-price__price product-price__price-{{ section.id }} product-price__sale product-price__sale--single">
                   <span id="ProductPrice-{{ section.id }}">
-                    {{ current_variant.price | money }}
+                    {{ current_variant.price | money }} / per day
                   </span>
                   <span class="product-price__sale-label product-price__sale-label-{{ section.id }}">{{ 'products.product.on_sale' | t }}</span>
                 </span>
@@ -134,7 +134,7 @@
               <s id="ComparePrice-{{ section.id }}" class="hide">{{ current_variant.compare_at_price | money }}</s>
               <span class="product-price__price product-price__price-{{ section.id }}">
                 <span id="ProductPrice-{{ section.id }}">
-                  {{ current_variant.price | money }}
+                  {{ current_variant.price | money }} / per day
                 </span>
                 <span class="product-price__sale-label product-price__sale-label-{{ section.id }} hide">{{ 'products.product.on_sale' | t }}</span>
               </span>
@@ -176,7 +176,10 @@
           {{ product.description }}
         </div>
         <hr>
-        {% include 'calendar' %}
+
+        <div class="calendar-Form">
+          {% include 'calendar' %}
+        </div>
         {% comment %} carousel {% endcomment %}
 
         
