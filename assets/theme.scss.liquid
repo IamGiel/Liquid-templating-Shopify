@@ -6345,6 +6345,60 @@ input {
   left: -20%;
 }
 
+/* On screens that are 667px wide or less, the background color is olive */
+@media screen and (max-width: 667px) {
+  .address-text, #contactUs{
+    display:none;
+  }
+  .reserve-header {
+    color: #436D96;
+    position: relative;
+    left: -8%;
+    text-align: center;
+  }
+  .calendar-Form {
+    position: relative;
+    display: block;
+    top: 16em;
+    left: 9%;
+  }
+  .return {
+    width: 50%;
+    margin: 0px;
+    padding: 6px;
+    font-size: 15px;
+    display: inline-flex;
+    position: relative;
+    top: 12vh;
+    left: -36%;
+  }
+  .pickup {
+    width: 50%;
+    margin: 0px;
+    padding: 6px;
+    font-size: 15px;
+    display: inline-flex;
+    position: relative;
+    left: 6%;
+  }
+  #submitBtn {
+    position: relative;
+    display: block;
+    top: 40vh;
+    left: -26em;
+    width: 10em;
+    padding: 12px;
+    background-color: green !important;
+  }
+  .pickup-Form {
+    display: inline-flex;
+    position: relative;
+    left: -12%;
+    top: -8vh;
+    margin-bottom: 22%;
+  }
+}
+
 
 {% comment %} footer {% endcomment %}
 
