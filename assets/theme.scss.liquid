@@ -6359,7 +6359,7 @@ input {
   .calendar-Form {
     position: relative;
     display: block;
-    top: 16em;
+    top: -2vh;
     left: 9%;
   }
   .return {
@@ -6370,7 +6370,7 @@ input {
     display: inline-flex;
     position: relative;
     top: 12vh;
-    left: -36%;
+    left: -38%;
   }
   .pickup {
     width: 50%;
@@ -6379,16 +6379,17 @@ input {
     font-size: 15px;
     display: inline-flex;
     position: relative;
-    left: 6%;
+    left: 4%;
   }
   #submitBtn {
     position: relative;
     display: block;
     top: 40vh;
-    left: -26em;
-    width: 10em;
-    padding: 12px;
+    left: -300%;
+    width: 28vh;
+    padding: 1px;
     background-color: green !important;
+    height:7vh;
   }
   .pickup-Form {
     display: inline-flex;
@@ -6396,6 +6397,22 @@ input {
     left: -12%;
     top: -8vh;
     margin-bottom: 22%;
+  }
+  {% comment %} second form {% endcomment %}
+  .customer-info {
+    display: none;
+    width: 19em;
+    position: relative;
+    left: -5%;
+  }
+  form.fte input {
+    color: #666;
+    background: #fff;
+    border: 1px solid #ccc;
+    width: 200%;
+    padding: 15px 20px;
+    margin: 15px 0 30px;
+    transition: all .2s;
   }
 }
 

@@ -2,7 +2,7 @@
 .footer{
   position: relative;
   width: 100%;
-  height: 43vh;
+  height: 53vh;
   display: block;
   background-color:#656667;
   margin-top: 29vh;
@@ -11,7 +11,7 @@
 .footer-contact{
   position: relative;
   width: 100%;
-  height: 43vh;
+  height: 44vh;
   display: flex;
   color:white;
   margin-top: 29vh;
@@ -110,6 +110,97 @@
   left: 0%;
   color: white;
 }
+#copyRight{
+  position: relative;
+  display: block;
+  top: -15vh;
+  left: 36%;
+  color: white;
+  font-size: 12px;
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 667px) {
+
+.footer {
+    position: relative;
+    width: 100%;
+    height: 134vh;
+    display: block;
+    background-color: #656667;
+    margin-top: 29vh;
+    color: white;
+  }
+  .footerLinks {
+    position: relative;
+    display: block;
+    top: -16vh;
+    width: 100%;
+    height: 27vh;
+    left: 18%;
+  }
+
+  .footerLinks2 {
+    position: relative;
+    display: block;
+    top: -4vh;
+    width: 27%;
+    height: 26vh;
+    left: 18%;
+  }
+  .pFooter {
+    color: white !important;
+    display: block;
+    width: 269%;
+    margin-top: -26px;
+    position: relative;
+    top: 5vh;
+  }
+  .related-prod {
+    position: relative;
+    display: block;
+    top: -5em;
+    left: 0%;
+  }
+  #percentOff {
+    position: relative;
+    display: block;
+    top: -3vh;
+    width: 67%;
+    height: 6vh;
+    left: 2%;
+    color: white;
+  }
+  .subscribe {
+    position: relative;
+    display: block;
+    top: -28vh;
+    width: 100%;
+    height: 6vh;
+    left: 17%;
+  }
+  #subscribeBtn {
+    position: relative;
+    display: block;
+    top: -6vh;
+    width: 29%;
+    height: 6vh;
+    left: 39%;
+  }
+  #subscribeInput {
+    width: 39%;
+  }
+  #copyRight {
+    position: relative;
+    display: block;
+    top: -15vh;
+    left: 17%;
+    color: white;
+    font-size: 12px;
+  }
+}
+
+
 
 </style>
 
@@ -148,12 +239,11 @@
   <p id="percentOff">Subscribe to get 5% off your rent</p>
     <input id="subscribeInput" type="email" placeholder="email@mail.com" name="subscribe" />
     <button type="button" class="btn btn-secondary" data-dismiss="modal" id="subscribeBtn">Subscribe</button>
-
   </div>
 
-
-
-
-
-
+  <div class="copy-right"> 
+    <p id="copyRight">
+      &copy; Neighborlys Equipment and Rental LLC
+    </p>
+  </div>
 <div>
