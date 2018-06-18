@@ -5,7 +5,8 @@ View it here:
 
 👇🏼
 
-<a href="https://neighborlys.myshopify.com">
+<a href="https://neighborlys.myshopify.com/">
+
 
 
 <p>Here</p>
