@@ -5,7 +5,7 @@ View it here:
 
 👇🏼
 
-<a href="https://neighborlysequipment.com/collections/frontpage/products/electric-jackhammer-50-lbs-of-impact-energy-rent-today#modal1">
+<a href="https://neighborlys.myshopify.com">
 
 
 <p>Here</p>
