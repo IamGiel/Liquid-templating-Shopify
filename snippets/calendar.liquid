@@ -83,7 +83,12 @@
       Equipment: <br>
       <select id="inputState" class="form-control" name="Equipment">
         <option selected>Choose...</option>
-        <option value="---">---</option><option value="Angle Surfice Grinder">Angle Surfice Grinder</option><option value="Auger Towable Post-Hole Digger">Auger Towable Post-Hole Digger</option><option value="Cement Mixer - 4 Cubic Feet">Cement Mixer - 4 Cubic Feet</option><option value="Concrete Finisher">Concrete Finisher</option><option value="Concrete Saw - Gas Powered 16inch">Concrete Saw - Gas Powered 16inch</option><option value="Crane">Crane</option><option value="Electric Jack Hammer - 50lbs impact Energy">Electric Jack Hammer - 50lbs impact Energy</option><option value="Man Lift - 40ft Platform Height">Man Lift - 40ft Platform Height</option><option value="Skid Steer - 3100 Operating apacity">Skid Steer - 3100 Operating apacity</option><option value="Skid Steer - Mini Track Loader">Skid Steer - Mini Track Loader</option><option value="Trencher - Walk Behind">Trencher - Walk Behind</option>
+        _
+        _
+        _
+        _
+       <option value="Angle Surface Grinder">Angle Surface Grinder</option><option value="Auger - Towable Post-Hole Digger">Auger - Towable Post-Hole Digger</option><option value="Backpack Leaf Blower 350BT" >Backpack Leaf Blower 350BT </option><option value="Cement Mixer - 4 Cubic Feet">Cement Mixer - 4 Cubic Feet </option><option value="Compound Slide Miter Saw 10 Inch" >Compound Slide Miter Saw 10 Inch </option><option value="Concrete Finisher - Walk-Behind Power Trowel">Concrete Finisher - Walk-Behind Power Trowel </option><option value="Concrete Saw -  Gas Powered 16 Inch">Concrete Saw -  Gas Powered 16 Inch </option><option value="Electric Drill (Hole Hawg) 1/2 Inch">Electric Drill (Hole Hawg) 1/2 Inch</option><option value="Electric Jackhammer - 50 lbs of Impact Energy" >Electric Jackhammer - 50 lbs of Impact Energy </option><option value="Concrete 2 1/2 Inch T-Nailer">Concrete 2 1/2 Inch T-Nailer</option><option value="Hot Water Mix Pressure Washer 4000 PSI">Hot Water Mix Pressure Washer 4000 PSI </option><option value="Hydraulic Tiller 24 Inch" >Hydraulic Tiller 24 Inch </option><option value="Man Lift - 40 ft Platform Height">Man Lift - 40 ft Platform Height </option><option value="Skid Loader - 3,100 lb Operating Capacity" >Skid Loader - 3,100 lb Operating Capacity </option><option value="Skid Steer - Mini Track Loader">Skid Steer - Mini Track Loader </option><option value="Spot Welder - 120 Volts" >Spot Welder - 120 Volts </option><option value="Tractor - 50-59 HP">Tractor - 50-59 HP </option><option value="Trencher - Walk Behind" >Trencher - Walk Behind </option><option value="Vibratory Plate Compactor" >Vibratory Plate Compactor </option><option value="Weed Wacker/Trimmer 36 CC" >Weed Wacker/Trimmer 36 CC </option><option value="Wood Planer 13 Inch" >Wood Planer 13 Inch </option>
+
       </select>
 
       Comments: <br><textarea name="Comments" rows="5" placeholder="Enter your comments..."></textarea>
@@ -152,25 +157,19 @@ $("#submitBtn").on("click", (e) => {
   let returnIt = $("#returnIt").val().trim();
   let pickupDate  = pickup.toString().slice(-2);
   let returnItDate = returnIt.toString().slice(-2);
+  let pickupMonth = pickup.toString().slice(5, 7);
+  let dropofMonth = returnIt.toString().slice(5, 7);
   let date = new Date();
   let todaysDate = date.getDate();
   //print user input in the console
   console.log(pickup);
   console.log(returnIt);
-  console.log(pickupDate);
-  console.log(returnItDate);
+  console.log("this is pick day "pickupDate);
+  console.log("this is drop day "returnItDate);
+  console.log("this is pick month ",pickupMonth);
+  console.log("this is drop month ",dropofMonth);
 
-  if(!pickup || !returnIt){
-    alert("Uh oh!, check your the dates...");
-    return false;
-  }
-  if(returnItDate < pickupDate) {
-    alert("Looks like we're returning the equipment on a wrong date...");
-    return false;
-  }
-  if(pickupDate < todaysDate){
-    alert("Uh oh, cant pick it up from the past...");
-    return false;
+  
   }
   $("#finalBtn").show();
   $(".dates").append(pickup);

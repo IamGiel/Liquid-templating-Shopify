@@ -11,24 +11,26 @@
   {%- assign available = true -%}
 {% endif %}
 
-{%- assign money_price = price | money -%}
 
-  {% if compare_at_price > price %}
+
+{%- assign money_price = price | money -%} 
+
+  {% if compare_at_price > price %} 
 
     {% if available %}
       <dt>
-        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.regular_price' | t }}</span>
+        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.regular_price' | t }} / per day</span>
       </dt>
       <dd>
-        <s class="product-price__price">{{ compare_at_price | money }}</s>
+        <s class="product-price__price">{{ compare_at_price | money }} / per day</s>
       </dd>
       <dt>
-        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.sale_price' | t }}</span>
+        <span class="visually-hidden visually-hidden--inline">{{ 'products.product.sale_price' | t }} / per day </span>
       </dt>
       <dd>
         <span class="product-price__price product-price__sale">
           {{ money_price }}
-          <span class="product-price__sale-label" aria-hidden="true">{{ 'products.product.on_sale' | t }}</span>
+          <span class="product-price__sale-label" aria-hidden="true">{{ 'products.product.on_sale' | t }} / per day</span>
         </span>
       </dd>
     {% else %}
