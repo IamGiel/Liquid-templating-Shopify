@@ -76,7 +76,7 @@ sections/featured-blog.liquid:
 sections/featured-product.liquid:
   development: 2018-06-15T14:55:31-04:00   e63cdaa61accb4fc4597b227098bb5b2
 sections/footer.liquid:
-  development: 2018-06-25T12:31:49-04:00   376b61b2ff55464901dc82b768fa07bf
+  development: 2018-08-08T20:38:10-04:00   dcd2dda1021060455fc7912998782dc1
 sections/header.liquid:
   development: 2018-06-25T12:46:18-04:00   c81d91eae47a741ac1c77f6b8ef78de1
 sections/hero.liquid:
@@ -246,7 +246,7 @@ snippets/social-meta-tags.liquid:
 snippets/social-sharing.liquid:
   development: 2018-05-08T10:14:25-04:00   011dd5c58fa718c8016b784f2d9fa92b
 templates/OLD-404.liquid:
-  development: 2018-06-30T07:42:32-04:00   a0de3e7a6b46c4065620bb1b3c454d0f
+  development: 2018-08-08T19:46:48-04:00   8c09df6304f416e1293ff85e061bf4fa
 templates/article.liquid:
   development: 2018-05-08T10:14:25-04:00   7c31b2aef34a1be542f39efb9e24c13b
 templates/blog.liquid:
